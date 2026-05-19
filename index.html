@@ -76,13 +76,13 @@ strong{color:var(--text-primary);font-weight:600}
 
 /* === COVER === */
 @keyframes coverReveal{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-.cover-page{min-height:100vh;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:center;gap:3vh;padding:4vh 5vw;position:relative;overflow:hidden;background:radial-gradient(ellipse at 15% 30%,rgba(37,99,235,.13) 0%,transparent 55%),radial-gradient(ellipse at 85% 80%,rgba(249,115,22,.10) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(249,115,22,.07) 0%,transparent 40%),#FFFFFF}
+.cover-page{min-height:100vh;aspect-ratio:16/10;display:flex;flex-direction:column;justify-content:space-between;padding:3rem 4rem;position:relative;overflow:hidden;background:radial-gradient(ellipse at 15% 30%,rgba(37,99,235,.13) 0%,transparent 55%),radial-gradient(ellipse at 85% 80%,rgba(249,115,22,.10) 0%,transparent 50%),radial-gradient(ellipse at 90% 10%,rgba(249,115,22,.07) 0%,transparent 40%),#FFFFFF}
 .cover-page::after{content:'';position:absolute;top:-70px;right:-70px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,.11) 0%,transparent 65%);pointer-events:none;z-index:0}
 .cover-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(13,27,46,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(13,27,46,.028) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);-webkit-mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%);pointer-events:none}
 .cover-accent-bar{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(to bottom,var(--fh-blue-400) 0%,var(--fh-orange) 100%)}
 .cover-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;animation:coverReveal 1s cubic-bezier(.16,1,.3,1) .1s both}
 .cover-contact{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--text-muted);text-align:right;line-height:2.1}
-.cover-body{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0}
+.cover-body{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:3rem 0}
 .cover-body-text{display:flex;flex-direction:column;justify-content:center}
 .cover-photo{position:relative;border-radius:16px;overflow:hidden;box-shadow:0 24px 64px rgba(13,27,46,.18),0 4px 16px rgba(13,27,46,.1)}
 .cover-photo img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/3}
