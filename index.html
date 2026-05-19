@@ -469,8 +469,7 @@ body.mode-slides .report{
 body.mode-slides .report > *{
   position:absolute!important;
   inset:0!important;
-  overflow-y:auto!important;
-  overflow-x:hidden!important;
+  overflow:hidden!important;
   opacity:0!important;
   pointer-events:none!important;
   z-index:1!important;
@@ -1199,16 +1198,6 @@ img.lazy-img.loaded{background:none;animation:none}
   <h2 class="section-title">Diagnóstico — estado actual de la fachada</h2>
   <div class="section-divider"></div>
 
-  <!-- Hallazgos en layout horizontal (4 columnas) -->
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-bottom:2rem">
-    <div class="card reveal"><div class="card-icon" style="background:rgba(234,88,12,.1)">🎨</div><h4>Desgaste de pintura</h4><p>Desprendimiento y deterioro del recubrimiento existente por exposición UV y humedad, requiriendo aplicación de Koraza Pro 550.</p></div>
-    <div class="card reveal"><div class="card-icon" style="background:rgba(234,88,12,.1)">🌧️</div><h4>Filtraciones activas</h4><p>Paso de agua detectado en placas y zonas de cubierta — requiere impermeabilización con Sikalastic 617.</p></div>
-    <div class="card reveal"><div class="card-icon" style="background:rgba(234,88,12,.1)">🔧</div><h4>Sellos deteriorados</h4><p>Sellos de ventanería y juntas perimetrales agrietados o desprendidos. Se requiere recambio con Soudal Multibond.</p></div>
-    <div class="card reveal"><div class="card-icon" style="background:rgba(234,88,12,.1)">🧱</div><h4>Graniplast dañado</h4><p>Zonas con desprendimiento de textura graniplast que requieren reposición completa con imprimante y mortero impermeabilizado.</p></div>
-  </div>
-
-  <!-- Registro fotográfico — espacio para fotos -->
-  <h3 style="font-family:'Space Grotesk',sans-serif;font-size:1.1rem;font-weight:600;margin-bottom:1rem;color:var(--text-primary)">Registro fotográfico</h3>
   <div class="photo-grid" id="fotos-diagnostico" style="display:grid;grid-template-columns:repeat(6,1fr);gap:.75rem">
     <div class="photo-item"><img src="fotos/foto-01.jpeg" alt="Diagnóstico 01" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 01</div></div>
     <div class="photo-item"><img src="fotos/foto-02.jpeg" alt="Diagnóstico 02" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 02</div></div>
