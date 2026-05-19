@@ -287,7 +287,8 @@ td:first-child{color:var(--text-primary);font-weight:500}
 /* === PHOTO GRID === */
 .photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem}
 .photo-grid--2col{grid-template-columns:repeat(2,1fr)}
-.photo-item{border-radius:8px;overflow:hidden;border:1px solid var(--border-subtle);position:relative;aspect-ratio:4/3;background:var(--bg-surface)}
+.photo-item{border-radius:6px;overflow:hidden;position:relative;background:var(--bg-surface);min-height:0}
+#fotos-diagnostico .photo-item{aspect-ratio:auto;height:100%}
 .photo-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1),filter .5s ease;filter:brightness(.9) saturate(.9)}
 .photo-item:hover img{transform:scale(1.06);filter:brightness(1) saturate(1)}
 .photo-label{position:absolute;bottom:0;left:0;right:0;padding:.5rem .75rem;background:linear-gradient(to top,rgba(13,27,46,.75),transparent);font-family:'JetBrains Mono',monospace;font-size:.62rem;color:#FFFFFF;letter-spacing:.08em;text-transform:uppercase}
@@ -1193,36 +1194,36 @@ img.lazy-img.loaded{background:none;animation:none}
 </section>
 
 <!-- SLIDE 3: DIAGNÓSTICO -->
-<section class="section reveal" id="diagnostico">
+<section class="section reveal" id="diagnostico" style="display:flex;flex-direction:column">
   <div class="section-code">03 — Diagnóstico</div>
   <h2 class="section-title">Diagnóstico — estado actual de la fachada</h2>
-  <div class="section-divider"></div>
+  <div class="section-divider" style="margin:.5rem 0"></div>
 
-  <div class="photo-grid" id="fotos-diagnostico" style="display:grid;grid-template-columns:repeat(6,1fr);gap:.75rem">
-    <div class="photo-item"><img src="fotos/foto-01.jpeg" alt="Diagnóstico 01" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 01</div></div>
-    <div class="photo-item"><img src="fotos/foto-02.jpeg" alt="Diagnóstico 02" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 02</div></div>
-    <div class="photo-item"><img src="fotos/foto-03.jpeg" alt="Diagnóstico 03" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 03</div></div>
-    <div class="photo-item"><img src="fotos/foto-04.jpeg" alt="Diagnóstico 04" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 04</div></div>
-    <div class="photo-item"><img src="fotos/foto-05.jpeg" alt="Diagnóstico 05" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 05</div></div>
-    <div class="photo-item"><img src="fotos/foto-06.jpeg" alt="Diagnóstico 06" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 06</div></div>
-    <div class="photo-item"><img src="fotos/foto-07.jpeg" alt="Diagnóstico 07" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 07</div></div>
-    <div class="photo-item"><img src="fotos/foto-08.jpeg" alt="Diagnóstico 08" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 08</div></div>
-    <div class="photo-item"><img src="fotos/foto-09.jpeg" alt="Diagnóstico 09" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 09</div></div>
-    <div class="photo-item"><img src="fotos/foto-10.jpeg" alt="Diagnóstico 10" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 10</div></div>
-    <div class="photo-item"><img src="fotos/foto-11.jpeg" alt="Diagnóstico 11" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 11</div></div>
-    <div class="photo-item"><img src="fotos/foto-12.jpeg" alt="Diagnóstico 12" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 12</div></div>
-    <div class="photo-item"><img src="fotos/foto-13.jpeg" alt="Diagnóstico 13" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 13</div></div>
-    <div class="photo-item"><img src="fotos/foto-14.jpeg" alt="Diagnóstico 14" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 14</div></div>
-    <div class="photo-item"><img src="fotos/foto-15.jpeg" alt="Diagnóstico 15" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 15</div></div>
-    <div class="photo-item"><img src="fotos/foto-16.jpeg" alt="Diagnóstico 16" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 16</div></div>
-    <div class="photo-item"><img src="fotos/foto-17.jpeg" alt="Diagnóstico 17" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 17</div></div>
-    <div class="photo-item"><img src="fotos/foto-18.jpeg" alt="Diagnóstico 18" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 18</div></div>
-    <div class="photo-item"><img src="fotos/foto-19.jpeg" alt="Diagnóstico 19" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 19</div></div>
-    <div class="photo-item"><img src="fotos/foto-20.jpeg" alt="Diagnóstico 20" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 20</div></div>
-    <div class="photo-item"><img src="fotos/foto-21.jpeg" alt="Diagnóstico 21" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 21</div></div>
-    <div class="photo-item"><img src="fotos/foto-22.jpeg" alt="Diagnóstico 22" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 22</div></div>
-    <div class="photo-item"><img src="fotos/foto-23.jpeg" alt="Diagnóstico 23" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 23</div></div>
-    <div class="photo-item"><img src="fotos/foto-24.jpeg" alt="Diagnóstico 24" loading="lazy" style="width:100%;height:180px;object-fit:cover;border-radius:8px;border:1px solid var(--border-subtle)"><div class="photo-label" style="font-family:'JetBrains Mono',monospace;font-size:.55rem;color:var(--text-muted);margin-top:.3rem;text-align:center">Foto 24</div></div>
+  <div class="photo-grid" id="fotos-diagnostico" style="display:grid;grid-template-columns:repeat(6,1fr);grid-template-rows:repeat(4,1fr);gap:.5rem;flex:1;min-height:0">
+    <div class="photo-item"><img src="fotos/foto-01.jpeg" alt="Diagnóstico 01" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-02.jpeg" alt="Diagnóstico 02" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-03.jpeg" alt="Diagnóstico 03" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-04.jpeg" alt="Diagnóstico 04" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-05.jpeg" alt="Diagnóstico 05" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-06.jpeg" alt="Diagnóstico 06" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-07.jpeg" alt="Diagnóstico 07" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-08.jpeg" alt="Diagnóstico 08" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-09.jpeg" alt="Diagnóstico 09" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-10.jpeg" alt="Diagnóstico 10" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-11.jpeg" alt="Diagnóstico 11" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-12.jpeg" alt="Diagnóstico 12" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-13.jpeg" alt="Diagnóstico 13" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-14.jpeg" alt="Diagnóstico 14" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-15.jpeg" alt="Diagnóstico 15" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-16.jpeg" alt="Diagnóstico 16" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-17.jpeg" alt="Diagnóstico 17" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-18.jpeg" alt="Diagnóstico 18" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-19.jpeg" alt="Diagnóstico 19" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-20.jpeg" alt="Diagnóstico 20" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-21.jpeg" alt="Diagnóstico 21" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-22.jpeg" alt="Diagnóstico 22" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-23.jpeg" alt="Diagnóstico 23" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
+    <div class="photo-item"><img src="fotos/foto-24.jpeg" alt="Diagnóstico 24" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:6px"></div>
   </div>
 </section>
 
